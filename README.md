@@ -25,7 +25,7 @@ db = Sequel.connect ...
 
 db.extension :pg_defer_constraints
 
-db.defer_constraints :public, :custom_schema do
+db.defer_constraints do
   ...
 end
 ```

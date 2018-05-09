@@ -1,4 +1,4 @@
-require "bundler/gem_tasks"
+require 'bundler/gem_tasks'
 require 'rake/testtask'
 
 Rake::TestTask.new(:spec) do |t|
@@ -13,6 +13,5 @@ Rake::TestTask.new(:spec) do |t|
   t.options << "--name=/#{ENV['NAME']}/ " if ENV['NAME']
   t.options << "-l #{ENV['LINE']} " if ENV['LINE'] && ENV['TEST']
 end
-
 
 task :default => :spec

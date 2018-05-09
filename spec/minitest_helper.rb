@@ -1,3 +1,4 @@
+require 'coverage_helper'
 require 'minitest/autorun'
 require 'minitest/colorin'
 require 'pry-nav'
@@ -6,18 +7,16 @@ require 'sequel'
 require 'sequel/extensions/pg_defer_constraints'
 
 driver = {
-  host: 'localhost',
-  port: 5432,
   database: 'pg_defer_constraints_test',
   username: 'postgres',
   password: 'password'
 }
 
 if RUBY_ENGINE == 'jruby'
-  driver[:adapter] = "jdbc:postgresql" 
+  driver[:adapter] = 'jdbc:postgresql'
   require 'jdbc/postgres'
 else
-  driver[:adapter] = "postgres"
+  driver[:adapter] = 'postgres'
   require 'pg'
 end
 

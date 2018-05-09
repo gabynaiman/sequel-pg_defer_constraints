@@ -1,5 +1,11 @@
 # Sequel::Postgres::DeferConstraints
 
+[![Gem Version](https://badge.fury.io/rb/sequel-pg_defer_constraints.svg)](https://rubygems.org/gems/sequel-pg_defer_constraints)
+[![Build Status](https://travis-ci.org/gabynaiman/sequel-pg_defer_constraints.svg?branch=master)](https://travis-ci.org/gabynaiman/sequel-pg_defer_constraints)
+[![Coverage Status](https://coveralls.io/repos/github/gabynaiman/sequel-pg_defer_constraints/badge.svg?branch=master)](https://coveralls.io/github/gabynaiman/sequel-pg_defer_constraints?branch=master)
+[![Code Climate](https://codeclimate.com/github/gabynaiman/sequel-pg_defer_constraints.svg)](https://codeclimate.com/github/gabynaiman/sequel-pg_defer_constraints)
+[![Dependency Status](https://gemnasium.com/gabynaiman/sequel-pg_defer_constraints.svg)](https://gemnasium.com/gabynaiman/sequel-pg_defer_constraints)
+
 Disable and enable PG constraints
 
 ## Installation

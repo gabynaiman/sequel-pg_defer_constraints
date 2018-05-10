@@ -6,21 +6,15 @@ require 'logger'
 require 'sequel'
 require 'sequel/extensions/pg_defer_constraints'
 
-driver = {
-  database: 'pg_defer_constraints_test',
-  username: 'postgres',
-  password: 'password'
-}
-
 if RUBY_ENGINE == 'jruby'
-  driver[:adapter] = 'jdbc:postgresql'
   require 'jdbc/postgres'
 else
-  driver[:adapter] = 'postgres'
   require 'pg'
 end
 
-DB = Sequel.connect driver 
+adapter = RUBY_ENGINE == 'jruby' ? 'jdbc:postgresql' : 'postgres'
+
+DB = Sequel.connect "#{adapter}://localhost/pg_defer_constraints_test?user=postgres&password=password"
 
 DB.extension :pg_defer_constraints 
 
